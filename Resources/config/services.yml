@@ -1,0 +1,61 @@
+services:
+    novaway.open_graph.metadata.file_locator:
+        class: Metadata\Driver\FileLocator
+        public: false
+        arguments:
+            - []
+
+    novaway.open_graph.metadata.yaml_driver:
+        class: Novaway\Component\OpenGraph\Metadata\Driver\YamlDriver
+        public: false
+        arguments:
+            - "@novaway.open_graph.metadata.file_locator"
+
+    novaway.open_graph.metadata.annotation_driver:
+        class: Novaway\Component\OpenGraph\Metadata\Driver\AnnotationDriver
+        public: false
+        arguments:
+            - "@annotation_reader"
+
+    novaway.open_graph.metadata.cache:
+        alias: "novaway.open_graph.metadata.file_cache"
+        public: false
+
+    novaway.open_graph.metadata.file_cache:
+        class: Metadata\Cache\FileCache
+        public: false
+        arguments:
+            - []
+
+    novaway.open_graph.lazy_loading_driver:
+        class: Metadata\Driver\LazyLoadingDriver
+        public: false
+        arguments:
+            - "@service_container"
+            - "novaway.open_graph.metadata_driver"
+
+    novaway.open_graph.metadata_driver:
+        alias: "novaway.open_graph.chain_driver"
+
+    novaway.open_graph.chain_driver:
+        class: Metadata\Driver\DriverChain
+        public: false
+        arguments:
+            -
+                - "@novaway.open_graph.metadata.yaml_driver"
+                - "@novaway.open_graph.metadata.annotation_driver"
+
+    novaway.open_graph.metadata_factory:
+        class: Metadata\MetadataFactory
+        public: false
+        arguments:
+            - "@novaway.open_graph.lazy_loading_driver"
+            - Metadata\ClassHierarchyMetadata
+            - false
+        calls:
+            - ["setCache", ["@?novaway.open_graph.metadata.cache"]]
+
+    novaway.open_graph.generator:
+        class: Novaway\Component\OpenGraph\OpenGraphGenerator
+        arguments:
+            - "@novaway.open_graph.metadata_factory"

@@ -1,0 +1,22 @@
+{
+    "name": "novaway/open-graph-bundle",
+    "description": "Provide a simple integration of the OpenGraph protocol",
+    "type": "symfony-bundle",
+    "keywords": ["open graph", "facebook"],
+    "homepage": "http://github.com/novaway/OpenGraphBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jérémy DECOOL",
+            "email": "jeremy@novaway.fr"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "symfony/symfony": "~2.3|~3.0",
+        "novaway/open-graph": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {"Novaway\\Bundle\\OpenGraphBundle\\": ""}
+    }
+}
