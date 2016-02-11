@@ -59,3 +59,14 @@ services:
         class: Novaway\Component\OpenGraph\OpenGraphGenerator
         arguments:
             - "@novaway.open_graph.metadata_factory"
+
+    novaway.open_graph.view_renderer:
+        class: Novaway\Component\OpenGraph\View\OpenGraphRenderer
+        public: false
+
+    novaway.open_graph.twig_extension:
+        class: Novaway\Bundle\OpenGraphBundle\Twig\OpenGraphExtension
+        arguments:
+            - "@novaway.open_graph.view_renderer"
+        tags:
+            - { name: twig.extension }

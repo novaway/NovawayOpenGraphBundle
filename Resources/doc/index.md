@@ -49,3 +49,11 @@ The `OpenGraphGenerator` is available as `novaway.open_graph.generator` service 
 // $myObject = ...
 $graphGenerator = $this->get('novaway.open_graph.generator')->generate($myObject);
 ```
+
+## Render OpenGraph in templates
+
+The bundle comes with some Twig functions to render the graph into you templates.
+
+* `renderNamespace` : Render graph prefix attributes (namespaces)
+* `renderGraph` : Render <meta> tags for the graph
+* `renderTag` : Render a specific tag of the graph
