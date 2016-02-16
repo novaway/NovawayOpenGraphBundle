@@ -21,6 +21,7 @@
         "atoum/stubs": "^2.5"
     },
     "autoload": {
-        "psr-4": {"Novaway\\Bundle\\OpenGraphBundle\\": ""}
+        "psr-4": {"Novaway\\Bundle\\OpenGraphBundle\\": ""},
+        "exclude-from-classmap": ["Tests/"]
     }
 }
