@@ -1,3 +1,3 @@
 <?php
 
-$script->addTestsFromDirectory(__DIR__ . DIRECTORY_SEPARATOR . '/Tests/Units');
+$script->addTestsFromDirectory(__DIR__ . '/Tests/Units');
