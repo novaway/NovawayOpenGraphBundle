@@ -1,5 +1,10 @@
 # Open Graph Bundle
 
+[![Build Status](https://travis-ci.org/novaway/NovawayOpenGraphBundle.svg?branch=master)](https://travis-ci.org/novaway/NovawayOpenGraphBundle)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/novaway/NovawayOpenGraphBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/novaway/NovawayOpenGraphBundle/?branch=master)
+[![Latest Stable Version](https://poser.pugx.org/novaway/open-graph-bundle/v/stable.png)](https://packagist.org/packages/novaway/open-graph-bundle)
+
+
 This bundle integrates the [OpenGraph library](https://github.com/novaway/open-graph) into Symfony2.
 
 ## Compatibility
