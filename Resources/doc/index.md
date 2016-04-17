@@ -25,7 +25,7 @@ public function registerBundles()
 }
 ```
 
-See all available (configuration options)[configuration-reference.md].
+See all available [configuration options](configuration-reference.md).
 
 ## Graph configuration
 
