@@ -23,6 +23,7 @@ public function registerBundles()
         new \Novaway\Bundle\OpenGraphBundle\NovawayOpenGraphBundle(),
     );
 }
+```
 
 See all available (configuration options)[configuration-reference.md].
 
