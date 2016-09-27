@@ -1,6 +1,6 @@
 # Open Graph Bundle
 
-This bundle integrates the [OpenGraph library](https://github.com/novaway/open-graph) into Symfony2.
+This bundle integrates the [OpenGraph library](https://github.com/novaway/open-graph) into Symfony.
 
 ## Installation
 

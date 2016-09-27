@@ -5,7 +5,7 @@
 [![Latest Stable Version](https://poser.pugx.org/novaway/open-graph-bundle/v/stable.png)](https://packagist.org/packages/novaway/open-graph-bundle)
 
 
-This bundle integrates the [OpenGraph library](https://github.com/novaway/open-graph) into Symfony2.
+This bundle integrates the [OpenGraph library](https://github.com/novaway/open-graph) into Symfony.
 
 ## Compatibility
 
